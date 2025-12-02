@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://3woresuocofq"]
+[gd_scene load_steps=4 format=3 uid="uid://3woresuocofq"]
 
 [ext_resource type="Script" path="res://label.gd" id="1_75kao"]
 [ext_resource type="Script" path="res://button.gd" id="1_il17n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltgbn"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,6 +12,7 @@ offset_left = 417.0
 offset_top = 521.0
 offset_right = 657.0
 offset_bottom = 639.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ltgbn")
 text = "Roll Dice"
 script = ExtResource("1_il17n")
 
