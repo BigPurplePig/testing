@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://3woresuocofq"]
+[gd_scene load_steps=3 format=3 uid="uid://3woresuocofq"]
 
 [ext_resource type="Script" path="res://label.gd" id="1_75kao"]
+[ext_resource type="Script" path="res://button.gd" id="1_il17n"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,12 +11,17 @@ offset_top = 521.0
 offset_right = 657.0
 offset_bottom = 639.0
 text = "Roll Dice"
+script = ExtResource("1_il17n")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 455.0
 offset_top = 368.0
 offset_right = 610.0
 offset_bottom = 490.0
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("1_75kao")
 
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
 [connection signal="pressed" from="Button" to="Label" method="_on_button_pressed"]
