@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://3woresuocofq"]
+[gd_scene load_steps=10 format=3 uid="uid://3woresuocofq"]
 
 [ext_resource type="Script" path="res://label.gd" id="1_75kao"]
 [ext_resource type="Script" path="res://button.gd" id="1_il17n"]
 [ext_resource type="Script" path="res://dice_options.gd" id="3_mf1n4"]
+[ext_resource type="Texture2D" uid="uid://cy481t71foxbi" path="res://Golden_DIce.png" id="4_70uic"]
 [ext_resource type="Script" path="res://amount.gd" id="4_lhout"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltgbn"]
@@ -141,10 +142,11 @@ offset_bottom = 40.0
 
 [node name="CurrencyIcon" type="TextureRect" parent="user_cash"]
 layout_mode = 2
+texture = ExtResource("4_70uic")
 
 [node name="amount" type="Label" parent="user_cash"]
 layout_mode = 2
-text = "testing"
+text = "0"
 script = ExtResource("4_lhout")
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
