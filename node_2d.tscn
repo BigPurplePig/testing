@@ -144,7 +144,7 @@ layout_mode = 2
 
 [node name="amount" type="Label" parent="user_cash"]
 layout_mode = 2
-text = "testing"
+text = "0"
 script = ExtResource("4_lhout")
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

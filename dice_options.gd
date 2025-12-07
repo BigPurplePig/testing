@@ -12,10 +12,10 @@ func check_matches():
 	for i in range(len(choice)):
 		
 		if choice[i] == label.user_rolls[i]:
-			print("matched roll")
+			print("match")
 			
 		else: 
-			print("did not match")
+			print("no match")
 			
 func clear_previous():
 	choice.clear()
