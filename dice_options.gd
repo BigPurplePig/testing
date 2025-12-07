@@ -3,7 +3,7 @@ extends Control
 #choice detects which choice the user has made
 var choice = []
 
-var num_die = 2
+var num_die = 1
 var choice_count = 0
 var label
 var amount

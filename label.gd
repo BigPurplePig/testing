@@ -11,10 +11,12 @@ func _process(delta: float) -> void:
 
 func roll_number():
 	var times = DiceOptions.num_die
-	var text_To_Display = ""
+	var display_text
 	for i in range(times):
-		var roll1 = randi_range(1, 6)
-		user_rolls.append(roll1)
-		
-		
-	
+		var roll = randi_range(1, 6)
+		user_rolls.append(roll)
+		if i == 0:
+			display_text = str(roll)
+		else:
+			display_text += "   " + str(roll)
+	text = display_text

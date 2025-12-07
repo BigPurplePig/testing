@@ -22,6 +22,6 @@ func add_money():
 	for i in range(len(DiceOptions.choice)):
 		if DiceOptions.choice[i] == label.user_rolls[i]:
 			money += correct_money*multiplier
-			text = money
+			text = str(money)
 			
 			
