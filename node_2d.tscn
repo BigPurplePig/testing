@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://3woresuocofq"]
+[gd_scene load_steps=9 format=3 uid="uid://3woresuocofq"]
 
 [ext_resource type="Script" path="res://label.gd" id="1_75kao"]
 [ext_resource type="Script" path="res://button.gd" id="1_il17n"]
+[ext_resource type="Script" path="res://dice_options.gd" id="3_mf1n4"]
+[ext_resource type="Script" path="res://amount.gd" id="4_lhout"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltgbn"]
 
@@ -58,8 +60,84 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_75kao")
 
+[node name="DiceOptions" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -15.0
+offset_right = 19.0
+offset_bottom = 25.0
+script = ExtResource("3_mf1n4")
+
+[node name="Option1" type="Button" parent="DiceOptions"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 520.0
+offset_right = 480.0
+offset_bottom = 551.0
+text = "1"
+
+[node name="Option2" type="Button" parent="DiceOptions"]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 520.0
+offset_right = 523.0
+offset_bottom = 551.0
+text = "2"
+
+[node name="Option3" type="Button" parent="DiceOptions"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 520.0
+offset_right = 567.0
+offset_bottom = 551.0
+text = "3"
+
+[node name="Option4" type="Button" parent="DiceOptions"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 520.0
+offset_right = 611.0
+offset_bottom = 551.0
+text = "4"
+
+[node name="Option5" type="Button" parent="DiceOptions"]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 520.0
+offset_right = 657.0
+offset_bottom = 551.0
+text = "5"
+
+[node name="Option6" type="Button" parent="DiceOptions"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 520.0
+offset_right = 706.0
+offset_bottom = 551.0
+text = "6"
+
+[node name="user_cash" type="HBoxContainer" parent="."]
+offset_right = 179.0
+offset_bottom = 40.0
+
+[node name="CurrencyIcon" type="TextureRect" parent="user_cash"]
+layout_mode = 2
+
+[node name="amount" type="Label" parent="user_cash"]
+layout_mode = 2
+text = "testing"
+script = ExtResource("4_lhout")
+
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
 [connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
 [connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
 [connection signal="pressed" from="Button" to="Label" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="DiceOptions" method="_on_button_pressed"]
+[connection signal="pressed" from="DiceOptions/Option1" to="DiceOptions" method="_on_option_1_pressed"]
+[connection signal="pressed" from="DiceOptions/Option2" to="DiceOptions" method="_on_option_2_pressed"]
+[connection signal="pressed" from="DiceOptions/Option3" to="DiceOptions" method="_on_option_3_pressed"]
+[connection signal="pressed" from="DiceOptions/Option4" to="DiceOptions" method="_on_option_4_pressed"]
+[connection signal="pressed" from="DiceOptions/Option5" to="DiceOptions" method="_on_option_5_pressed"]
+[connection signal="pressed" from="DiceOptions/Option6" to="DiceOptions" method="_on_option_6_pressed"]
