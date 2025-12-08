@@ -3,11 +3,10 @@ extends Label
 var DiceOptions
 var label
 
-var multiplier = 1
-var money = 0
+
 
 # adds 5 for every correct guess without mulitplier
-var correct_money = 5
+var correct_money = 1 * Globals.multiplier
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,7 +20,7 @@ func _process(delta: float) -> void:
 func add_money(): 
 	for i in range(len(DiceOptions.choice)):
 		if DiceOptions.choice[i] == label.user_rolls[i]:
-			money += correct_money*multiplier
-			text = str(money)
+			Globals.money += correct_money
+			text = str(Globals.money)
 			
 			
